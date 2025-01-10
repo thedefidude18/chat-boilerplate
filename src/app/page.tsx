@@ -2,9 +2,18 @@
 
 import { NearWalletConnector } from "@/components/NearWalletConnector";
 import { useBitteWallet, Wallet } from "@mintbase-js/react";
-import { BitteAiChat, BitteAssistantConfig } from "bitte-ai-chat";
+import { BitteAiChat } from "bitte-ai-chat";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+
+const bitteAgent = {
+  id: "bitte-assistant",
+  name: "Bitte Assistant",
+  description:
+    "Bitte assistant for interacting with NFTs and Fungible Tokens (FTs) on NEAR Protocol.  Users can query, mint, transfer NFTs, transfer FTs, create drops, and swap tokens.",
+  verified: true,
+  image: "/bitte.svg",
+};
 
 export default function Home() {
   const { selector } = useBitteWallet();
@@ -27,17 +36,9 @@ export default function Home() {
       <main className="flex flex-col items-center gap-8 max-w-5xl mx-auto">
         <NearWalletConnector />
         <BitteAiChat
-          agentData={
-            {
-              id: "bitte-assistant",
-              name: "Bitte Assistant",
-              description:
-                "Bitte assistant for interacting with NFTs and Fungible Tokens (FTs) on NEAR Protocol.  Users can query, mint, transfer NFTs, transfer FTs, create drops, and swap tokens.",
-              verified: true,
-              image: "/bitte.svg",
-            } as BitteAssistantConfig
-          }
-          wallet={wallet}
+          options={{ agentImage: bitteAgent.image, agentName: bitteAgent.name }}
+          agentid={bitteAgent.id}
+          wallet={{ near: { wallet } }}
           apiUrl="/api/chat"
           colors={{
             generalBackground: "#000000",
