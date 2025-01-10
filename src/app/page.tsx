@@ -45,7 +45,7 @@ export default function Home() {
             messageBackground: "#18181A",
             textColor: "#FFFFFF",
             buttonColor: "#0F172A",
-            borderColor: "#0F172A",
+            borderColor: "#ffffff",
           }}
         />
       </main>
