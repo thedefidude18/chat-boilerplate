@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@bitte-ai/chat": "0.0.1-beta-20",
+    "@bitte-ai/chat": "^0.0.1-beta-24",
     "@mintbase-js/react": "^0.6.5",
     "@near-wallet-selector/modal-ui": "^8.9.15",
     "next": "15.1.4",
     "react": "^19",
-    "react-dom": "^19"
+    "react-dom": "^19",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
