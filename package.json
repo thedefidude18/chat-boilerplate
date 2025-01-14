@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@bitte-ai/chat": "^0.0.1-beta-24",
+    "@bitte-ai/chat": "^0.0.1-beta-37",
     "@mintbase-js/react": "^0.6.5",
     "@near-wallet-selector/modal-ui": "^8.9.15",
     "lucide-react": "^0.471.1",

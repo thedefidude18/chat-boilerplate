@@ -4,6 +4,7 @@ import { BitteAiChat } from "@bitte-ai/chat";
 import "@bitte-ai/chat/style.css";
 import { useBitteWallet, Wallet } from "@mintbase-js/react";
 import { useEffect, useState } from "react";
+import WelcomeMessage from "./WelcomeMessage";
 
 const bitteAgent = {
   id: "bitte-assistant",
@@ -15,7 +16,7 @@ const bitteAgent = {
 };
 
 const Main: React.FC = () => {
-  const { selector } = useBitteWallet();
+  const { selector, activeAccountId } = useBitteWallet();
   const [wallet, setWallet] = useState<Wallet>();
 
   useEffect(() => {
@@ -28,17 +29,18 @@ const Main: React.FC = () => {
 
   return (
     <main className="flex flex-col items-center gap-8 max-w-5xl mx-auto">
+      {!activeAccountId ? <WelcomeMessage /> : null}
       <BitteAiChat
         options={{ agentImage: bitteAgent.image, agentName: bitteAgent.name }}
         agentid={bitteAgent.id}
         wallet={{ near: { wallet } }}
         apiUrl="/api/chat"
         colors={{
-          generalBackground: "#000000",
-          messageBackground: "#18181A",
-          textColor: "#FFFFFF",
-          buttonColor: "#0F172A",
-          borderColor: "#ffffff",
+          generalBackground: "#18181A",
+          messageBackground: "#0A0A0A",
+          textColor: "#FAFAFA",
+          buttonColor: "#FFFFFF",
+          borderColor: "#334155",
         }}
       />
     </main>
