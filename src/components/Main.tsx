@@ -1,9 +1,10 @@
 "use client";
 
 import { NearWalletConnector } from "@/components/NearWalletConnector";
+import { BitteAiChat } from "@bitte-ai/chat";
 import { useBitteWallet, Wallet } from "@mintbase-js/react";
-import { BitteAiChat } from "bitte-ai-chat";
 import { useEffect, useState } from "react";
+import '@bitte-ai/chat/style.css'
 
 const bitteAgent = {
   id: "bitte-assistant",
