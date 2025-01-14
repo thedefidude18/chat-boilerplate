@@ -1,10 +1,9 @@
 "use client";
 
-import { NearWalletConnector } from "@/components/NearWalletConnector";
 import { BitteAiChat } from "@bitte-ai/chat";
+import "@bitte-ai/chat/style.css";
 import { useBitteWallet, Wallet } from "@mintbase-js/react";
 import { useEffect, useState } from "react";
-import '@bitte-ai/chat/style.css'
 
 const bitteAgent = {
   id: "bitte-assistant",
@@ -29,7 +28,6 @@ const Main: React.FC = () => {
 
   return (
     <main className="flex flex-col items-center gap-8 max-w-5xl mx-auto">
-      <NearWalletConnector />
       <BitteAiChat
         options={{ agentImage: bitteAgent.image, agentName: bitteAgent.name }}
         agentid={bitteAgent.id}

@@ -22,7 +22,7 @@ export const NearWalletConnector = () => {
     return (
       <div>
         <button
-          className="bg-black px-4 py-2 hover:bg-opacity-80 text-white rounded-lg"
+          className="bg-[#FAFAFA] h-[40px] px-8 py-2 hover:bg-opacity-80 text-[#18181B] rounded-md font-medium"
           onClick={handleSignIn}
         >
           Connect Wallet
@@ -35,7 +35,7 @@ export const NearWalletConnector = () => {
     <div className="flex flex-wrap gap-2 items-center justify-center">
       <p>{activeAccountId}</p>
       <button
-        className="bg-black px-4 py-2 hover:bg-opacity-80 text-white rounded-lg"
+        className="bg-[#FAFAFA] h-[40px] px-8 py-2 hover:bg-opacity-80 text-[#18181B] rounded-md font-medium"
         onClick={handleSignout}
       >
         Disconnect
