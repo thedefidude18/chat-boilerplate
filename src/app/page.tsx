@@ -3,7 +3,7 @@ import Main from "@/components/Main";
 
 export default function Home() {
   return (
-    <div className="p-4">
+    <div>
       <Header />
       <Main />
     </div>
