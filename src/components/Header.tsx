@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { NearWalletConnector } from "./NearWalletConnector";
+import NearWalletConnector from "./NearWalletConnector";
 
 const Header: React.FC = () => {
   return (
