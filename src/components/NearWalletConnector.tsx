@@ -41,9 +41,9 @@ const NearWalletConnector: React.FC = () => {
 
   if (!isConnected) {
     return (
-      <div>
+      <div className="fixed bottom-0 md:relative bg-black p-8 z-30 w-full left-0 md:p-0 md:w-auto md:bg-transparent">
         <button
-          className="bg-[#FAFAFA] h-[40px] px-8 py-2 hover:bg-opacity-80 text-[#18181B] rounded-md font-medium"
+          className="bg-[#FAFAFA] h-[40px] px-8 py-2 hover:bg-opacity-80 text-[#18181B] rounded-md font-medium w-full md:w-auto"
           onClick={handleSignIn}
         >
           Connect Wallet
