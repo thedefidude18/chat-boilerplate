@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { NearWalletConnector } from "./NearWalletConnector";
-import { ThemeToggle } from "./ThemeToggle";
 
 const Header: React.FC = () => {
   return (
@@ -10,10 +9,12 @@ const Header: React.FC = () => {
       <div className="flex gap-4 items-center">
         <NearWalletConnector />
         <div className="h-[36px] w-px bg-[#334155] mx-2" />
-        <button className="bg-[#27272A] text-[#FAFAFA] px-8 py-2 hover:bg-opacity-80 rounded-md font-medium h-[40px]">
+        <a
+          href="mailto:paul@bitte.ai"
+          className="bg-[#27272A] text-[#FAFAFA] px-8 py-2 hover:bg-opacity-80 rounded-md font-medium h-[40px]"
+        >
           Contact
-        </button>
-        <ThemeToggle />
+        </a>
       </div>
     </header>
   );

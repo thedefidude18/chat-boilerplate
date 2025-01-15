@@ -9,12 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@bitte-ai/chat": "^0.0.1-beta-37",
+    "@bitte-ai/chat": "0.0.1-beta-42",
     "@mintbase-js/react": "^0.6.5",
     "@near-wallet-selector/modal-ui": "^8.9.15",
+    "chat@latest": "link:bitte-ai/chat@latest",
     "lucide-react": "^0.471.1",
     "next": "15.1.4",
-    "next-themes": "^0.4.4",
     "react": "^19",
     "react-dom": "^19"
   },

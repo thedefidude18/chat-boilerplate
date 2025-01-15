@@ -16,7 +16,7 @@ const bitteAgent = {
 };
 
 const Main: React.FC = () => {
-  const { selector, activeAccountId } = useBitteWallet();
+  const { selector } = useBitteWallet();
   const [wallet, setWallet] = useState<Wallet>();
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Main: React.FC = () => {
 
   return (
     <main className="flex flex-col items-center gap-8 max-w-5xl mx-auto">
-      {!activeAccountId ? <WelcomeMessage /> : null}
+      <div className="h-[600px] w-full">
       <BitteAiChat
         options={{ agentImage: bitteAgent.image, agentName: bitteAgent.name }}
         agentid={bitteAgent.id}
@@ -39,10 +39,12 @@ const Main: React.FC = () => {
           generalBackground: "#18181A",
           messageBackground: "#0A0A0A",
           textColor: "#FAFAFA",
-          buttonColor: "#FFFFFF",
+          buttonColor: "#000000",
           borderColor: "#334155",
         }}
+        welcomeMessageComponent={<WelcomeMessage />}
       />
+      </div>
     </main>
   );
 };
