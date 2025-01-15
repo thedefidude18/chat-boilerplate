@@ -28,22 +28,22 @@ const Main: React.FC = () => {
   }, [selector]);
 
   return (
-    <main className="flex flex-col items-center gap-8 max-w-5xl mx-auto">
-      <div className="h-[600px] w-full">
-      <BitteAiChat
-        options={{ agentImage: bitteAgent.image, agentName: bitteAgent.name }}
-        agentid={bitteAgent.id}
-        wallet={{ near: { wallet } }}
-        apiUrl="/api/chat"
-        colors={{
-          generalBackground: "#18181A",
-          messageBackground: "#0A0A0A",
-          textColor: "#FAFAFA",
-          buttonColor: "#000000",
-          borderColor: "#334155",
-        }}
-        welcomeMessageComponent={<WelcomeMessage />}
-      />
+    <main className="flex flex-col items-center gap-8 max-w-5xl mx-auto my-8">
+      <div className="h-[600px] w-full ">
+        <BitteAiChat
+          options={{ agentImage: bitteAgent.image, agentName: bitteAgent.name }}
+          agentid={bitteAgent.id}
+          wallet={{ near: { wallet } }}
+          apiUrl="/api/chat"
+          colors={{
+            generalBackground: "#18181A",
+            messageBackground: "#0A0A0A",
+            textColor: "#FAFAFA",
+            buttonColor: "#000000",
+            borderColor: "#334155",
+          }}
+          welcomeMessageComponent={<WelcomeMessage />}
+        />
       </div>
     </main>
   );
