@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import { useGetWalletsBalance } from "@/src/hooks/user/useGetWalletsBalance";
-import { AccountDropdownProps } from "@/src/lib/types/account-selector";
 import { LogOut, SettingsIcon } from "lucide-react";
 
 import {
@@ -13,26 +11,8 @@ import {
   DropdownMenuTrigger,
 } from "../../shadcn/DropdownMenu";
 
-import { useWalletContext } from "@/src/providers/WalletProvider";
-
-const AccountDropdown = ({
-  isMobile,
-  handleConnect,
-}: AccountDropdownProps): JSX.Element => {
+const AccountDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { walletsInfo, fetchedBalances } = useGetWalletsBalance();
-  const { accountData, evmAdapter } = useWalletContext();
-
-  // Filter out the currently connected account
-  const otherAccounts = walletsInfo.filter(
-    (wallet) => wallet.accountId !== accountData?.accountId
-  );
-
-  const accountBalance =
-    accountData?.accountId &&
-    fetchedBalances?.filter(
-      (balances) => balances.accountId == accountData.accountId
-    )[0];
 
   const triggerElement = (
     <button
