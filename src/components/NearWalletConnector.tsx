@@ -1,7 +1,8 @@
-import { useState } from "react";
+'use client'
 
 import { useBitteWallet } from "@mintbase-js/react";
 import { LogOut, SettingsIcon } from "lucide-react";
+import { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -55,10 +56,10 @@ const NearWalletConnector: React.FC = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>{triggerElement}</DropdownMenuTrigger>
       <DropdownMenuContent
-        className="w-full rounded-lg md:mr-28 md:w-[364px]"
+        className="w-full rounded-lg md:mr-28 md:w-[364px] bg-black"
         sideOffset={12}
       >
-        <DropdownMenuLabel className="text-text-secondary">
+        <DropdownMenuLabel>
           Currently Connected
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
