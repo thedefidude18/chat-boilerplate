@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@bitte-ai/chat':
-        specifier: v0.0.6
-        version: 0.0.6(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)
+        specifier: 0.0.8
+        version: 0.0.8(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@3.4.17)(typescript@5.7.3)
       '@mintbase-js/react':
         specifier: ^0.6.5
         version: 0.6.5(bn.js@5.2.1)(borsh@1.0.0)(graphql@16.10.0)
@@ -137,8 +137,8 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@bitte-ai/chat@0.0.6':
-    resolution: {integrity: sha512-d3RIY0rM5NuBVIGdGreHvT0KfjmTNJL2iEqbWX2JjD1BswobSYpvGFj1WTFQtinetoicaWFRSN+2MYtO0Ov9+A==}
+  '@bitte-ai/chat@0.0.8':
+    resolution: {integrity: sha512-B9pfGBz50uADZoMGUYGmDQdz0eneR+X/dUJ8BZMJmC6/wuK3B1HEXiXpkIn8fhgoDgophBNIMH9WllHYzcfOvg==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -3330,6 +3330,11 @@ packages:
   tailwind-merge@2.6.0:
     resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
 
+  tailwindcss-animate@1.0.7:
+    resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
+
   tailwindcss@3.4.17:
     resolution: {integrity: sha512-w33E2aCvSDP0tW9RZuNXadXlkHXqFzSkQew/aIa2i/Sj8fThxwovwlXHSPXTbAHwEIhBFXAedUhP2tueAKP8Og==}
     engines: {node: '>=14.0.0'}
@@ -3755,7 +3760,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@bitte-ai/chat@0.0.6(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)':
+  '@bitte-ai/chat@0.0.8(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@3.4.17)(typescript@5.7.3)':
     dependencies:
       '@ai-sdk/anthropic': 1.0.8(zod@3.24.1)
       '@ai-sdk/openai': 1.0.16(zod@3.24.1)
@@ -3764,7 +3769,6 @@ snapshots:
       '@mintbase-js/rpc': 0.6.5
       '@near-wallet-selector/core': 8.9.15(near-api-js@4.0.3)
       '@radix-ui/react-accordion': 1.2.2(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@radix-ui/react-dialog': 1.1.4(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@radix-ui/react-label': 2.1.1(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@radix-ui/react-slot': 1.1.1(@types/react@19.0.4)(react@19.0.0)
       '@radix-ui/react-switch': 1.1.2(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -3785,6 +3789,7 @@ snapshots:
       remark-gfm: 4.0.0
       remark-math: 6.0.0
       tailwind-merge: 2.6.0
+      tailwindcss-animate: 1.0.7(tailwindcss@3.4.17)
       vaul: 1.1.2(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       viem: 2.22.6(typescript@5.7.3)(zod@3.24.1)
       zod: 3.24.1
@@ -3812,6 +3817,7 @@ snapshots:
       - graphql
       - ioredis
       - supports-color
+      - tailwindcss
       - typescript
       - uploadthing
       - utf-8-validate
@@ -8198,6 +8204,10 @@ snapshots:
       use-sync-external-store: 1.4.0(react@19.0.0)
 
   tailwind-merge@2.6.0: {}
+
+  tailwindcss-animate@1.0.7(tailwindcss@3.4.17):
+    dependencies:
+      tailwindcss: 3.4.17
 
   tailwindcss@3.4.17:
     dependencies:
