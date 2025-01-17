@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@bitte-ai/chat':
-        specifier: 0.0.9
-        version: 0.0.9(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@3.4.17)(typescript@5.7.3)
+        specifier: 0.0.10
+        version: 0.0.10(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@3.4.17)(typescript@5.7.3)
       '@mintbase-js/react':
         specifier: ^0.6.5
         version: 0.6.5(bn.js@5.2.1)(borsh@1.0.0)(graphql@16.10.0)
@@ -137,8 +137,8 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@bitte-ai/chat@0.0.9':
-    resolution: {integrity: sha512-6Xqj3EPpmO7LeGTmYLnGvXQMjZqol2+TqKu+xn3aRSbsbCB1rQQaoU18UIOP0CarB5JjD3ZkidFbkd7y0vljUg==}
+  '@bitte-ai/chat@0.0.10':
+    resolution: {integrity: sha512-bUrNlGqj4u4O2KlJ31A3Ta1RAb62Sfb1unYXSq/GxTmUz5db8UhpUgJ7xYN/OtOV2mArZLb8BCR0FZ2+wuMTlQ==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -3760,7 +3760,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@bitte-ai/chat@0.0.9(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@3.4.17)(typescript@5.7.3)':
+  '@bitte-ai/chat@0.0.10(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@3.4.17)(typescript@5.7.3)':
     dependencies:
       '@ai-sdk/anthropic': 1.0.8(zod@3.24.1)
       '@ai-sdk/openai': 1.0.16(zod@3.24.1)

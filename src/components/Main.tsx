@@ -29,7 +29,7 @@ const Main: React.FC = () => {
 
   return (
     <main className="flex flex-col items-center gap-8 max-w-5xl mx-auto my-8">
-      <div className="h-[650px] md:h-[620px] w-full px-4 md:px-0">
+      <div className="h-[calc(100vh-180px)] w-full px-4 md:px-0">
         <BitteAiChat
           options={{ agentImage: bitteAgent.image, agentName: bitteAgent.name }}
           agentid={bitteAgent.id}
