@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useBitteWallet } from "@mintbase-js/react";
 import { LogOut, SettingsIcon } from "lucide-react";
@@ -19,7 +19,8 @@ const NearWalletConnector: React.FC = () => {
 
   const handleSignOut = async () => {
     const wallet = await selector.wallet();
-    return wallet.signOut();
+    await wallet.signOut();
+    window.location.reload();
   };
 
   const handleSignIn = async () => {
@@ -59,9 +60,7 @@ const NearWalletConnector: React.FC = () => {
         className="w-full rounded-lg md:mr-28 md:w-[364px] bg-black"
         sideOffset={12}
       >
-        <DropdownMenuLabel>
-          Currently Connected
-        </DropdownMenuLabel>
+        <DropdownMenuLabel>Currently Connected</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem>{activeAccountId}</DropdownMenuItem>
 
