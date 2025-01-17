@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #000000;
-}
-
 body {
   color: #ffffff;
-  background: var(--background);
+  background: #000000;
   font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useBitteWallet } from "@mintbase-js/react";
 import Image from "next/image";
@@ -12,9 +12,13 @@ const Header: React.FC = () => {
     <header className="flex items-center justify-between gap-4 border-b border-[#334155] px-8 md:px-16 py-8">
       <Image src="/bitte-logo.svg" alt="Bitte logo" width={112} height={22} />
       <div className="flex gap-4 items-center">
-        <NearWalletConnector  />
+        <NearWalletConnector />
 
-        <div className={`h-[36px] w-px bg-[#334155] mx-2 ${isConnected ? "hidden" : ""}`} />
+        <div
+          className={`h-[36px] w-px bg-[#334155] mx-2 hidden md:block ${
+            isConnected ? "hidden" : ""
+          }`}
+        />
         <a
           href="mailto:paul@bitte.ai"
           className="bg-[#27272A] text-[#FAFAFA] px-8 py-2 hover:bg-opacity-80 rounded-md font-medium h-[40px]"
