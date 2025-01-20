@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const { isConnected } = useBitteWallet();
 
   return (
-    <header className="flex items-center justify-between gap-4 border-b border-[#334155] px-6 py-4 md:px-16 md:py-8">
+    <header className="flex items-center justify-between gap-4 border-b border-[#334155] px-6 py-4 md:px-16 md:py-6">
       <Image
         src="/bitte-logo.svg"
         alt="Bitte logo"
