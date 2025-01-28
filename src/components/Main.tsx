@@ -32,7 +32,7 @@ const Main: React.FC = () => {
       <div className="h-[calc(100vh-114px)] lg:h-[calc(100vh-180px)] w-full">
         <BitteAiChat
           options={{ agentImage: bitteAgent.image, agentName: bitteAgent.name }}
-          agentid={bitteAgent.id}
+          agentId={bitteAgent.id}
           wallet={{ near: { wallet } }}
           apiUrl="/api/chat"
           colors={{
