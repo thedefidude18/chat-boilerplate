@@ -32,7 +32,7 @@ const WelcomeMessage: React.FC = () => {
           <ArrowUpRight size={14} />
         </a>
         <a
-          href="https://docs.bitte.ai/"
+          href="https://docs.bitte.ai/agents/embeddable-chat-component"
           target="_blank"
           className="no-underline hover:underline flex gap-2 items-center"
         >
