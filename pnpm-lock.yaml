@@ -16,13 +16,10 @@ importers:
         version: 0.6.5(bn.js@5.2.1)(borsh@1.0.0)(graphql@16.10.0)
       '@near-wallet-selector/modal-ui':
         specifier: ^8.9.15
-        version: 8.9.15(near-api-js@4.0.4)
+        version: 8.9.15(near-api-js@4.0.3)
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.1.4
         version: 2.1.4(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      chat@latest:
-        specifier: link:bitte-ai/chat@latest
-        version: link:bitte-ai/chat@latest
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -5401,9 +5398,9 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@near-wallet-selector/modal-ui@8.9.15(near-api-js@4.0.4)':
+  '@near-wallet-selector/modal-ui@8.9.15(near-api-js@4.0.3)':
     dependencies:
-      '@near-wallet-selector/core': 8.9.15(near-api-js@4.0.4)
+      '@near-wallet-selector/core': 8.9.15(near-api-js@4.0.3)
       copy-to-clipboard: 3.3.3
       qrcode: 1.5.4
       react: 18.2.0
