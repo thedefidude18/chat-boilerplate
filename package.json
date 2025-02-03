@@ -1,5 +1,5 @@
 {
-  "name": "ai-chat-boilerplate",
+  "name": "chat-boilerplate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@bitte-ai/chat": "latest",
+    "@bitte-ai/chat": "0.0.17",
     "@bitte-ai/react": "0.6.6-beta-prerelease.40",
     "@near-wallet-selector/modal-ui": "latest",
     "@radix-ui/react-dropdown-menu": "latest",
