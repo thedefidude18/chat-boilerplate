@@ -1,6 +1,6 @@
 "use client";
 
-import { useBitteWallet } from "@mintbase-js/react";
+import { useBitteWallet } from "@bitte-ai/react";
 import Image from "next/image";
 import React from "react";
 import NearWalletConnector from "./NearWalletConnector";
