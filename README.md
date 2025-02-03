@@ -1,37 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# chat-boilerplate
+
+## Read the tutorial:
+https://docs.bitte.ai/agents/embeddable-chat-component
 
 ## Getting Started
 
-First, run the development server:
+This guide will help you set up the project and configure the necessary components to get started.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+- Node.js
+- pnpm (Node Package Manager)
+- Bitte API Key
+
+### GET AN API KEY
+
+https://key.bitte.ai/
+
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/BitteProtocol/chat-boilerplate.git
+   cd chat-boilerplate
+   ```
+
+2. Install the dependencies:
+   ```bash
+   pnpm install
+   ```
+
+### Environment Variables
+
+Create a `.env` file in the root directory of your project and add the necessary environment keys. Here is an example of what your `.env` file might look like:
+
+```plaintext
+BITTE_API_KEY=your_api_key_here
+```
+### Configuring `Main.tsx`
+
+The `Main.tsx` component is already set up to use the Bitte AI chat functionality. Ensure that your environment variables are correctly set, as they might be used in the component or other parts of your application.
+
+Here is a brief overview of the `Main.tsx` component:
+
+```typescript
+"use client";
+
+import { BitteAiChat } from "@bitte-ai/chat";
+import "@bitte-ai/chat/style.css";
+import { useBitteWallet, Wallet } from "@bitte-ai/react";
+import { useEffect, useState } from "react";
+import WelcomeMessage from "./WelcomeMessage";
+
+const bitteAgent = {
+  id: "your-agent-id.vercel.app",
+  name: "Your Agent Name",
+  description:
+    "Agent Description",
+  image: "/icon.svg",
+};
+
+const Main: React.FC = () => {
+  const { selector } = useBitteWallet();
+  const [wallet, setWallet] = useState<Wallet>();
+
+  useEffect(() => {
+    const fetchWallet = async () => {
+      const walletInstance = await selector.wallet();
+      setWallet(walletInstance);
+    };
+    if (selector) fetchWallet();
+  }, [selector]);
+
+  return (
+    <main className="flex flex-col items-center gap-8 max-w-5xl mx-auto my-4 md:my-8">
+      <div className="h-[calc(100vh-114px)] lg:h-[calc(100vh-180px)] w-full">
+        <BitteAiChat
+          options={{ agentImage: bitteAgent.image, agentName: bitteAgent.name }}
+          agentId={bitteAgent.id}
+          wallet={{ near: { wallet } }}
+          apiUrl={"/api/chat"}
+          colors={{
+            generalBackground: "#18181A",
+            messageBackground: "#0A0A0A",
+            textColor: "#FAFAFA",
+            buttonColor: "#000000",
+            borderColor: "#334155",
+          }}
+          welcomeMessageComponent={<WelcomeMessage />}
+        />
+      </div>
+    </main>
+  );
+};
+
+export default Main;
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running the Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To start the project, run the following command:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm run dev
+```
 
-## Learn More
+This will start the development server and open the project in your default web browser.
 
-To learn more about Next.js, take a look at the following resources:
+### Additional Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- If you need to configure additional settings, refer to the documentation or comments within the codebase.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# bitte-ai-chat-boilerplate
+If you wish to contribute to this project, please fork the repository and submit a pull request.

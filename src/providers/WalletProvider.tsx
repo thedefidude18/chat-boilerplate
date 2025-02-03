@@ -1,6 +1,6 @@
 "use client";
 
-import { BitteWalletContextProvider } from "@mintbase-js/react";
+import { BitteWalletContextProvider } from "@bitte-ai/react";
 
 const BitteWalletSetup = {
   network: "mainnet",
