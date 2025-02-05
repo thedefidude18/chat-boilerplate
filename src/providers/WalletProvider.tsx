@@ -14,7 +14,7 @@ type WalletProviderProps = {
 
 const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
   return (
-    <BitteWalletContextProvider {...BitteWalletSetup} onlyBitteWallet={true}>
+    <BitteWalletContextProvider {...BitteWalletSetup}>
       {children}
     </BitteWalletContextProvider>
   );
